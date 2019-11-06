@@ -10,7 +10,7 @@ function App() {
     <>
       <NavBar />
       <Header />
-      {/* <MainContent /> */}
+      <MainContent />
       {/* <Footer /> */}
     
     

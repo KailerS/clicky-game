@@ -1,6 +1,6 @@
 .header {
     background-color: #2c323c;
-    background-image: url("https://www.thesun.co.uk/wp-content/uploads/2017/11/tmp_6e95hn_8581834aa802f9b6_wv_publicity_post_launch_still_10-0000011.jpg");
+    background-image: url("../images/background.jpg");
     background-size: cover;
     color: #fff;
     min-height: 200px;
@@ -47,6 +47,25 @@
     padding-bottom: 50px;
     width: 90%;
     margin: 0 auto
+}
+@media (min-width:1100px) {
+    .container {
+        padding-left: 100px;
+        padding-right: 100px;
+        width: 1100px
+    }
+}
+.click-item {
+    background-size: cover;
+    background-position: 50%;
+    height: 170px;
+    width: 170px;
+    margin: 8px 25px;
+    border: 5px solid #f1f1f1;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
+    cursor: pointer
 }
 
 
