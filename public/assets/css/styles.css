@@ -68,11 +68,23 @@
     cursor: pointer
 }
 
+.click-item:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);
+    -webkit-transition: .1s;
+    -o-transition: .1s;
+    transition: .1s
+}
+
 
 #root,
 #root > div,
 body,
 html {
     margin: 0;
-    padding: 0
+    padding: 0;
+    background-color: #242424;
 }
