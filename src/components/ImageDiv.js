@@ -9,8 +9,8 @@ function ImageDiv (props) {
             aria-label="click item" 
             className="click-item"
             id={props.id}
-            onClick={props.handleClick}
-            style={{backgroundImage: `url(${props.image})`}}            
+            onClick={() => props.handleClick(props.id)}
+            style={{backgroundImage: `url(${props.image})`}}          
             >
 
             </div>

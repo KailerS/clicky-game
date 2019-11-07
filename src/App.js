@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import NavBar from "./components/NavBar";
 import ImageDiv from "./components/ImageDiv";
 import data from "./data.json"
-// import Footer from "./components/Footer";
+
 
 
 class App extends Component {
@@ -16,28 +16,31 @@ class App extends Component {
   componentDidMount() {
     this.setState({ data: this.shuffleData(this.state.data) });
   }
-  
+
   handleCorrectGuess = newData => {
-    const { topScore, score } = this.state;
-    const newScore = score + 1;
+    const { topScore, currentScore } = this.state;
+    const newScore = currentScore + 1;
     const newTopScore = Math.max(newScore, topScore);
 
     this.setState({
       data: this.shuffleData(newData),
-      score: newScore,
+      currentScore: newScore,
       topScore: newTopScore
     });
   };
+
   handleIncorrectGuess = data => {
     this.setState({
       data: this.resetData(data),
-      score: 0
+      currentScore: 0
     });
   };
+
   resetData = data => {
     const resetData = data.map(item => ({ ...item, clicked: false }));
     return this.shuffleData(resetData);
   };
+
   shuffleData = data => {
     let i = data.length - 1;
     while (i > 0) {
@@ -49,6 +52,7 @@ class App extends Component {
     }
     return data;
   };
+
   handleItemClick = id => {
     let guessedCorrectly = false;
     const newData = this.state.data.map(item => {
@@ -84,10 +88,7 @@ class App extends Component {
               image={character.image}
             />
           ))}
-        </main>
-        {/* <Footer /> */}
-      
-      
+        </main>      
       </>
     )
 
